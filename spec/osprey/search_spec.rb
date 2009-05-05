@@ -58,6 +58,11 @@ describe Osprey::Search do
       it "should have 4 records that are not marked as new" do
         @results.select{|r| r.new_record? }.size.should == 4
       end
+      
+      describe "when feed ids are listed in the pool" do
+        
+      end
     end
+
   end
 end
