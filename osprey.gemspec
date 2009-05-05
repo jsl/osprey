@@ -1,7 +1,5 @@
 # -*- encoding: utf-8 -*-
 
-require 'rake'
-
 Gem::Specification.new do |s|
   s.name = %q{osprey}
   s.version = "0.0.2"
@@ -14,7 +12,8 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
-  s.files = FileList['lib/**/*.rb', '[A-Z]*', 'spec/**/*'].to_a
+  
+  s.files = Dir['lib/**/*.rb'] + Dir['[A-Z]*'] + Dir['spec/**/*']
   
   s.has_rdoc = true
   s.homepage = %q{http://github.com/jsl/osprey}
@@ -22,7 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.1}
   s.summary = %q{A Twitter API that keeps track of tweets you've seen}
-  s.test_files = FileList['spec/**/*']
+  s.test_files = Dir['spec/**/*']
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
