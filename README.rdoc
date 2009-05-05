@@ -1,0 +1,16 @@
+= Description
+
+Osprey is a tool for watching and grabbing Twitter tweets.  Currently, it provides an interface over the "Search" API.
+
+It keeps track of tweets that have been seen for a particular term so that you don't have to.
+
+= Usage
+
+results = Osprey::TwitterReader.new('swine flu').run
+
+results.records
+results.new_records
+
+= Author
+
+Justin S. Leitgeb, justin@phq.org
