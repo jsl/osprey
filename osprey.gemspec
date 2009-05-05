@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
     "spec/osprey/backend/memcache_spec.rb",
     "spec/osprey/backend/memory_spec.rb",
     "spec/osprey/result_set_spec.rb",
-    "spec/osprey/twitter_reader_spec.rb",
+    "spec/osprey/search_spec.rb",
     "spec/osprey_spec.rb",
     "spec/spec_helper.rb"
   ]
