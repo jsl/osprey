@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
     "lib/osprey/backend/memory.rb",
     "lib/osprey/result_set.rb",
     "lib/osprey/tweet.rb",
-    "lib/osprey/twitter_reader.rb",
+    "lib/osprey/search.rb",
     "spec/fixtures/result_set.yml",
     "spec/fixtures/swine_flu1.json",
     "spec/fixtures/swine_flu2.json",
@@ -49,7 +49,7 @@ Gem::Specification.new do |s|
     "spec/osprey/backend/memcache_spec.rb",
     "spec/osprey/backend/memory_spec.rb",
     "spec/osprey/result_set_spec.rb",
-    "spec/osprey/twitter_reader_spec.rb",
+    "spec/osprey/search_spec.rb",
     "spec/osprey_spec.rb",
     "spec/spec_helper.rb"
   ]

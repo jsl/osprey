@@ -1,5 +1,5 @@
 module Osprey
-  class TwitterReader
+  class Search
     attr_reader :term
     
     DEFAULTS = {
@@ -14,7 +14,7 @@ module Osprey
       @backend = initialize_backend(@options[:backend][:klass])
     end
     
-    def run            
+    def fetch            
       res = Curl::Easy.perform(url)
       
       if res.response_code == 200
