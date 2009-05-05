@@ -6,10 +6,10 @@ It keeps track of tweets that have been seen for a particular term so that you d
 
 = Usage
 
-results = Osprey::TwitterReader.new('swine flu').run
+  results = Osprey::TwitterReader.new('swine flu').run
 
-results.records      # Returns all records found as Osprey::Tweet objects
-results.new_records  # Returns only the records that you haven't seen in response to the query 'swine flu'
+  results.records      # Returns all records found as Osprey::Tweet objects
+  results.new_records  # Returns only the records that you haven't seen in response to the query 'swine flu'
 
 = Author
 
