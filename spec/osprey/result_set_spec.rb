@@ -2,7 +2,7 @@ require File.join(File.dirname(__FILE__),  %w[ .. spec_helper ])
 
 describe Osprey::ResultSet do
   before do
-    @rs = YAML.load_file(File.join(File.dirname(__FILE__), %w[.. fixtures result_set.yml]))
+    @rs = YAML.load_file(File.join(File.dirname(__FILE__), %w[.. fixtures swine_flu_result_set2.yml]))
   end
   
   it "should return 4 results for #new_records" do

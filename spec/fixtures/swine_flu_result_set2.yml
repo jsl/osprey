@@ -4,7 +4,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 14559662
     :iso_language_code: en
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/189894422/IMG00701_normal.JPG
     :twitter_id: 1701714354
     :text: School is shut down! due to swine flu!! thats a good thing right?
@@ -17,7 +17,7 @@
     :source: "&lt;a href=&quot;http://orangatame.com/products/twitterberry/&quot;&gt;TwitterBerry&lt;/a&gt;"
     :from_user_id: 4513402
     :iso_language_code: en
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/133607145/djeloowel_normal.jpg
     :twitter_id: 1701714238
     :text: Blame it on the flu got u feelin blue, blame it on the swine got u feelin blind, blame it on the mex mex mex mex mex mexicans....
@@ -29,7 +29,7 @@
   table: 
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 14573136
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://static.twitter.com/images/default_profile_normal.png
     :twitter_id: 1701713717
     :text: Swine Flu
@@ -42,7 +42,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 15592670
     :iso_language_code: da
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/197468025/images_normal.jpg
     :twitter_id: 1701713665
     :text: Destroying swine flu
@@ -55,7 +55,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 1983836
     :iso_language_code: en
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/61959717/DD_Oaxaca_Flower_normal.jpg
     :twitter_id: 1701712780
     :text: "@M_tm uh, finally, something more disturbing than swine flu..."
@@ -69,7 +69,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 15567837
     :iso_language_code: en
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/197027649/waiting_normal.jpg
     :twitter_id: 1701712037
     :text: Susie gave me a Lysol Hand Sanitizer that says &quot;Protects from Swine Flu&quot; (Haha) for the bracelet.
@@ -82,7 +82,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 13123935
     :iso_language_code: eo
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/151854910/20070408041551_nivertia06churras07-01069_normal.jpg
     :twitter_id: 1701711989
     :text: "@danilogentili Swine Flu !!!!!"
@@ -96,7 +96,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 1580999
     :iso_language_code: en
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/59851479/n31700687_7014_normal.jpg
     :twitter_id: 1701711830
     :text: realized that after swine flu we'll get Bear pox, followed by beaver fever, and ending with Mongoose Malaria.... Be on your toes!
@@ -109,7 +109,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 166576
     :iso_language_code: en
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/88556721/profpic2_lg_normal.png
     :twitter_id: 1701711644
     :text: + &quot;90 people get the swine flu and everyone wants to wear a face mask. Millions get AIDS and nobody wears a condom. Go figure.&quot;
@@ -122,7 +122,7 @@
     :source: "&lt;a href=&quot;http://twitterfeed.com&quot;&gt;twitterfeed&lt;/a&gt;"
     :from_user_id: 14562545
     :iso_language_code: en
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/189807824/1_normal.jpg
     :twitter_id: 1701711527
     :text: "#swineflu 6 More Swine Flu Cases Confirmed on LI - LongIslandPress.com http://ad.vu/bir4"
@@ -135,7 +135,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 8288437
     :iso_language_code: en
-    :new_record?: false
+    :new_record: false
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/193624367/100_1084_normal.jpg
     :twitter_id: 1701710705
     :text: That darn Swine Flu is getting a tad close for comfort! A school about twenty minutes from mine closed down for a few days tonight!
@@ -148,7 +148,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 3617869
     :iso_language_code: en
-    :new_record?: true
+    :new_record: true
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/71116723/jojobo_normal.jpg
     :twitter_id: 1701710268
     :text: "Explaining to the children why they don't need to be terrified of swine flu, but why they really do need to wash their hands. #swineflu"
@@ -161,7 +161,7 @@
     :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
     :from_user_id: 3362361
     :iso_language_code: en
-    :new_record?: true
+    :new_record: true
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/76497810/picture_normal.jpg
     :twitter_id: 1701709964
     :text: Another day locked up with Swine Flu outside. Just went to HomeDepot and more then 50 percent of clients have masks there.
@@ -174,7 +174,7 @@
     :source: "&lt;a href=&quot;http://twitterfox.net/&quot;&gt;TwitterFox&lt;/a&gt;"
     :from_user_id: 643746
     :iso_language_code: nl
-    :new_record?: true
+    :new_record: true
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/79399738/cami1_normal.jpg
     :twitter_id: 1701709832
     :text: "RT: @KYLking: Byron Center High School students celebrate 'swine break' after flu closes school for week http://tinyurl.com/d2b3yh"
@@ -187,7 +187,7 @@
     :source: "&lt;a href=&quot;http://iconfactory.com/software/twitterrific&quot;&gt;twitterrific&lt;/a&gt;"
     :from_user_id: 7400045
     :iso_language_code: en
-    :new_record?: true
+    :new_record: true
     :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/150699579/for_my_baby_normal.jpg
     :twitter_id: 1701709797
     :text: I know I said I was going to sleep but who sleeps when you can twitter Itslike an epidemic this twitter stuff it spread like the swine flu

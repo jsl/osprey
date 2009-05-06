@@ -2,7 +2,7 @@ module Osprey
   module Backend
     
     # Can be used to set up Memcache, or clients able to speak the Memcache protocol such as 
-    # Tokyo Tyrant, as a Feedzirra::Backend.
+    # Tokyo Tyrant, as a Osprey::Backend.
     class Memcache
       DEFAULTS = {
         :server => 'localhost',

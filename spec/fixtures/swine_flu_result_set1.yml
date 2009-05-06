@@ -1,0 +1,200 @@
+--- !seq:Osprey::ResultSet 
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/188156012/eye2_normal.jpg
+    :source: "&lt;a href=&quot;http://www.tweetdeck.com/&quot;&gt;TweetDeck&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:28:14 +0000
+    :to_user_id: 
+    :text: "RT @nicfish: Tracking Swine Flu with Microsoft Virtual Earth and Live Search  http://bit.ly/YqdDC  --&gt; sweet!"
+    :new_record?: true
+    :from_user: tameraclark
+    :from_user_id: 386286
+    :twitter_id: 1701715308
+    :iso_language_code: en
+    :id: 1701715308
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://static.twitter.com/images/default_profile_normal.png
+    :source: "&lt;a href=&quot;http://twitterfon.net/&quot;&gt;TwitterFon&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:28:12 +0000
+    :to_user_id: 9477722
+    :text: "@keepsgettinbetr when did i worry about the swine flu"
+    :new_record?: true
+    :from_user: Bayleeee
+    :from_user_id: 7978237
+    :twitter_id: 1701714956
+    :to_user: keepsgettinbetr
+    :iso_language_code: en
+    :id: 1701714956
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/181901124/31-01-07_1330_normal.jpg
+    :source: "&lt;a href=&quot;http://www.tweetdeck.com/&quot;&gt;TweetDeck&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:28:10 +0000
+    :to_user_id: 
+    :text: "RT @TelegraphNews: Swine flu: Mexico starts to ease virus restrictions http://tinyurl.com/db6jff"
+    :new_record?: true
+    :from_user: lili_one
+    :from_user_id: 4481131
+    :twitter_id: 1701714620
+    :iso_language_code: en
+    :id: 1701714620
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/66627032/frau-freide_normal.jpg
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:28:09 +0000
+    :to_user_id: 
+    :text: |-
+      Up to the minute swine flu origins: the visual explanation!
+      RT @tweetmeme Coconut Chutney: When pigs fly http://tinyurl.com/d8cobj
+    :new_record?: true
+    :from_user: hiddenground
+    :from_user_id: 4158379
+    :twitter_id: 1701714439
+    :iso_language_code: en
+    :id: 1701714439
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/189894422/IMG00701_normal.JPG
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:28:10 +0000
+    :to_user_id: 
+    :text: School is shut down! due to swine flu!! thats a good thing right?
+    :new_record?: true
+    :from_user: moonbrella
+    :from_user_id: 14559662
+    :twitter_id: 1701714354
+    :iso_language_code: en
+    :id: 1701714354
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/133607145/djeloowel_normal.jpg
+    :source: "&lt;a href=&quot;http://orangatame.com/products/twitterberry/&quot;&gt;TwitterBerry&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:28:07 +0000
+    :to_user_id: 
+    :text: Blame it on the flu got u feelin blue, blame it on the swine got u feelin blind, blame it on the mex mex mex mex mex mexicans....
+    :new_record?: true
+    :from_user: DJELOO
+    :from_user_id: 4513402
+    :twitter_id: 1701714238
+    :iso_language_code: en
+    :id: 1701714238
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://static.twitter.com/images/default_profile_normal.png
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:28:04 +0000
+    :to_user_id: 
+    :text: Swine Flu
+    :new_record?: true
+    :from_user: friendbartrends
+    :from_user_id: 14573136
+    :twitter_id: 1701713717
+    :id: 1701713717
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/197468025/images_normal.jpg
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:28:04 +0000
+    :to_user_id: 
+    :text: Destroying swine flu
+    :new_record?: true
+    :from_user: premierozone
+    :from_user_id: 15592670
+    :twitter_id: 1701713665
+    :iso_language_code: da
+    :id: 1701713665
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/61959717/DD_Oaxaca_Flower_normal.jpg
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:27:58 +0000
+    :to_user_id: 125590
+    :text: "@M_tm uh, finally, something more disturbing than swine flu..."
+    :new_record?: true
+    :from_user: Funchilde
+    :from_user_id: 1983836
+    :twitter_id: 1701712780
+    :to_user: M_tm
+    :iso_language_code: en
+    :id: 1701712780
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/197027649/waiting_normal.jpg
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:27:53 +0000
+    :to_user_id: 
+    :text: Susie gave me a Lysol Hand Sanitizer that says &quot;Protects from Swine Flu&quot; (Haha) for the bracelet.
+    :new_record?: true
+    :from_user: StayPositive_
+    :from_user_id: 15567837
+    :twitter_id: 1701712037
+    :iso_language_code: en
+    :id: 1701712037
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/151854910/20070408041551_nivertia06churras07-01069_normal.jpg
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:27:53 +0000
+    :to_user_id: 168227
+    :text: "@danilogentili Swine Flu !!!!!"
+    :new_record?: true
+    :from_user: pannain
+    :from_user_id: 13123935
+    :twitter_id: 1701711989
+    :to_user: danilogentili
+    :iso_language_code: eo
+    :id: 1701711989
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/59851479/n31700687_7014_normal.jpg
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:27:52 +0000
+    :to_user_id: 
+    :text: realized that after swine flu we'll get Bear pox, followed by beaver fever, and ending with Mongoose Malaria.... Be on your toes!
+    :new_record?: true
+    :from_user: BubbaStoned85
+    :from_user_id: 1580999
+    :twitter_id: 1701711830
+    :iso_language_code: en
+    :id: 1701711830
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/88556721/profpic2_lg_normal.png
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:27:51 +0000
+    :to_user_id: 
+    :text: + &quot;90 people get the swine flu and everyone wants to wear a face mask. Millions get AIDS and nobody wears a condom. Go figure.&quot;
+    :new_record?: true
+    :from_user: gemmerzz
+    :from_user_id: 166576
+    :twitter_id: 1701711644
+    :iso_language_code: en
+    :id: 1701711644
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/189807824/1_normal.jpg
+    :source: "&lt;a href=&quot;http://twitterfeed.com&quot;&gt;twitterfeed&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:27:50 +0000
+    :to_user_id: 
+    :text: "#swineflu 6 More Swine Flu Cases Confirmed on LI - LongIslandPress.com http://ad.vu/bir4"
+    :new_record?: true
+    :from_user: News_SwineFlu
+    :from_user_id: 14562545
+    :twitter_id: 1701711527
+    :iso_language_code: en
+    :id: 1701711527
+- !ruby/object:Osprey::Tweet 
+  table: 
+    :profile_image_url: http://s3.amazonaws.com/twitter_production/profile_images/193624367/100_1084_normal.jpg
+    :source: "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    :created_at: Tue, 05 May 2009 01:27:45 +0000
+    :to_user_id: 
+    :text: That darn Swine Flu is getting a tad close for comfort! A school about twenty minutes from mine closed down for a few days tonight!
+    :new_record?: true
+    :from_user: tylergraves2009
+    :from_user_id: 8288437
+    :twitter_id: 1701710705
+    :iso_language_code: en
+    :id: 1701710705

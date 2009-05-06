@@ -1,16 +1,75 @@
 = Description
 
-Osprey is a tool for watching and grabbing Twitter tweets.  Currently, it provides an interface over the "Search" API.
+Osprey is a tool for efficiently grabbing the latest Twitter tweets over the "search" API.
 
-It keeps track of tweets that have been seen for a particular term so that you don't have to.
+The premise behind Osprey is that your application shouldn't have to worry about sorting out new tweets from ones that
+you've seen.  Osprey takes care of these details, allowing your application to focus on more specific logic about what
+to do when a new tweet is discovered.  Even if you search on several related terms, Osprey only shows you the new tweets
+by storing the ids of previous tweets in a global pool which can easily be shared among multiple Osprey threads.
+  
+= Installation
+
+  sudo gem install osprey
 
 = Usage
 
+Basic usage of Osprey is simple, and more advanced usage is easily accomodated by the accepted options and the
+ability to write custom backend modules.
+ 
+In more basic cases, you can use Osprey as follows:
+ 
+  require 'osprey'
+  
   results = Osprey::Search.new('swine flu').fetch
 
   results.records      # Returns all records found as Osprey::Tweet objects
   results.new_records  # Returns only the records that you haven't seen in response to the query 'swine flu'
 
+Osprey starts to work its magic when you call fetch more than once, either in the current session or after re-
+instantiating the program.  Osprey will remember the tweets that it last retrieved and show you a list of new_feeds
+in the response object.
+
+= Processing Details
+
+Osprey implements a simple but effective algorithm for keeping track of which tweets are new and which have been seen before.
+
+First, Osprey keeps track of the tweets retrieved on previous fetches of a given term.  We use the last set of
+retrieved results for a given search term in order to construct the next query to Twitter.  Basically, we take 
+the highest integer ID already retrieved and use this to construct the search URL.  When we get the results back,
+we construct the results so that new_records only contains the tweets that we haven't seen before.
+
+If the event that no new results are found, we return the previous set of results to the user after marking all
+results as "seen".  We then store the previous results (with no records marked as "new") in order to keep the marker 
+of the last seen tweet for subsequent requests.
+
+Since there is the possibility that another search may have gotten the same tweet, we check each result against
+a global pool of Tweet ids, which we continually truncate so that we can quickly determine new feeds while pushing 
+out ids that we probably don't have to remember any more.  If the number of stored ids is too much or too little
+for your application, you can easily tune it in the configuration.
+
+= Configuration
+
+Osprey allows configuration of the backend module used for storage of previous Tweet retrievals, as well as the number
+of previous tweet ids to store so that we can discern new tweets from ones that we've already seen.
+
+== Backend module configuration
+
+Osprey stores information about previously fetched terms in the backends.  You can choose which backend to use through an optional
+options hash after the search term given to the Osprey::Search initializer.  By passing options[:backend][:klass], you can specify
+which backend to choose.  Currently supported options are Osprey::Backend::Filesystem, Osprey::Backend::Memcache (also works with Tokyo Tyrant)
+Osprey::Backend::Memory (uses a no-configuration Ruby Hash) and Osprey::Backend::DevNull, which doesn't save any information about previously
+fetched tweets.
+
+== Tweet id pool configuration
+
+Osprey saves ids of previously fetched tweets in the pool so that it can differentiate between new tweets and previously seen tweets, even
+if these tweets came from different search terms.  Obviously, if you run enough searches you'll run out of space to store the previously
+fetched ids, and searches will take longer since there is a bigger set of ids through which we need to scan to see if a tweet is new or not.
+
+Osprey defaults to saving 10,000 tweet ids, as this is usually enough to allow us to pick out new tweets, and it's small enough so that
+it doesn't take long to see if a particular tweet has been seen before or not.  If you like another number better, just set :preserved_tweet_ids 
+in the input options to Osprey::Search.  Setting this default to 0 will effectively disable Osprey's global memory for last-seen tweets.
+
 = Author
 
-Justin S. Leitgeb, justin@phq.org
+Justin S. Leitgeb, mailto:justin@phq.org
