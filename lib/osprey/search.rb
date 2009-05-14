@@ -6,7 +6,7 @@ module Osprey
     
     DEFAULTS = {
       :backend => {
-        :klass => Osprey::Backend::Memory
+        :moneta_klass   => 'Moneta::Memory',
       },
       :rpp => 50,
       :preserved_tweet_ids => 10_000
@@ -21,9 +21,9 @@ module Osprey
     #
     # Options
     # 
-    # :backend -  
+    # :moneta_backend -  
     #   The backend used for storing the serialized representation of the last fetch of
-    #   this query.
+    #   this query.  Uses Moneta, a unified interface to key-value storage systems.
     # 
     # :preserved_tweet_ids - 
     #   The number of Tweet ids that will be preserved.  This ensures that we're able to detect if
@@ -41,7 +41,7 @@ module Osprey
     def initialize(term, options = { })
       @term    = term
       @options = options.reverse_merge(DEFAULTS)
-      @backend = initialize_backend(@options[:backend][:klass])
+      @backend = initialize_backend(@options[:backend][:moneta_klass], @options[:backend].except(:moneta_klass))
     end
     
     def fetch
@@ -58,12 +58,9 @@ module Osprey
     
     private
     
-    # Initializes the on-disk structure that keeps track of the Twitter ids that 
-    # we've seen.  We use a sql lite data store because it handles concurrency
-    # for us, which is important if there are multiple threads hitting the data
-    # store.
-    def initialize_backend(klass)
-      klass.new(@options[:backend])
+    # Initializes the structure that keeps track of the Twitter ids that we've seen.
+    def initialize_backend(klass, options)
+      HashBack::Backend.new('Osprey', klass, options)
     end
 
     # Returns an Array of ids for the Tweets in result
@@ -105,7 +102,7 @@ module Osprey
         res.each{|r| r.new_record = false}
       end
       
-      @backend.set(url_key, res)
+      @backend[url_key] = res
       
       res
     end
@@ -113,13 +110,19 @@ module Osprey
     # Returns an Array of recently-fetched Twitter IDS, or an empty Array
     # if the backend doesn't have any previous results.
     def twitter_id_pool
-      @backend.get(twitter_id_pool_key) || [ ]
+      # This is a hack to deal with the fact that the backend seems to return an empty Hash when 
+      # a Moneta::Memory store has an uninitialized value.  TODO - take a closer look at this later
+      # and see if Moneta needs to be patched or if it's something screwy in the way we're using it.
+      res = @backend[twitter_id_pool_key]
+      res.nil? || res == { } ? [ ] : res
     end
 
     # Adds the given new tweet ids to the twitter id pool so that subsequent requests,
     # even if they're for other terms, won't see these tweets as new.
     def add_to_twitter_id_pool(tweets)
-      @backend.set(twitter_id_pool_key, ( twitter_id_pool | tweets.map{|t| t.twitter_id} ).sort.reverse.uniq[1..@options[:preserved_tweet_ids]] )
+      pool = twitter_id_pool
+      @backend[twitter_id_pool_key] = 
+        ( pool | tweets.map{|t| t.twitter_id} ).sort.reverse.uniq[1..@options[:preserved_tweet_ids]]
     end
 
     def twitter_id_pool_key
@@ -129,12 +132,12 @@ module Osprey
     # Returns an Array of results from the previous fetch, or an empty
     # Array if no previous results are detected.
     def previous_results
-      @backend.get(url_key) || [ ]      
+      @backend[url_key] || [ ]
     end
 
     # Returns the backend string that will be used for the storage of this term.
     # Effectively namespaces the urls so that we can use the backend modules for 
-    # storage of other things like a pool of recently read twitter ids.
+    # storage of other things like a pool of recently-read twitter ids.
     def url_key
       ['search', 'term', @term].join('-')
     end

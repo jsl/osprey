@@ -1,13 +1,13 @@
 require 'rubygems'
 require 'singleton'
 require 'curb'
+require 'hashback'
 require 'json'
-require 'sequel'
 require 'memcache'
 require 'ostruct'
 require 'cgi'
 
-lib_dirs =  [ 'core_ext', File.join('osprey', 'backend'), 'osprey' ].map do |d|
+lib_dirs =  [ 'core_ext', 'osprey' ].map do |d|
   File.join(File.dirname(__FILE__), d)
 end
 

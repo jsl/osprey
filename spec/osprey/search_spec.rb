@@ -7,7 +7,7 @@ describe Osprey::Search do
     end
     
     it "should create a new instance of the default backend" do
-      Osprey::Search.new('bar').instance_variable_get(:@backend).should be_a(Osprey::Backend::Memory)
+      Osprey::Search.new('bar').instance_variable_get(:@backend).should be_a(HashBack::Backend)
     end
   end
 
@@ -54,9 +54,9 @@ describe Osprey::Search do
       before do
         @curl.expects(:response_code).returns(200)
         @backend = mock('backend')
-        @backend.expects(:get).with('twitter-id-pool').twice
-        @backend.expects(:get).with(@tr.__send__(:url_key)).returns(YAML.load_file(File.join(File.dirname(__FILE__), %w[.. fixtures swine_flu_result_set1.yml])))
-        @backend.expects(:set).twice
+        @backend.expects(:[]).with('twitter-id-pool').twice
+        @backend.expects(:[]).with(@tr.__send__(:url_key)).returns(YAML.load_file(File.join(File.dirname(__FILE__), %w[.. fixtures swine_flu_result_set1.yml])))
+        @backend.expects(:[]=).twice
         @tr.instance_variable_set(:@backend, @backend)
         @swine_flu_json = File.read(File.join(File.dirname(__FILE__), %w[.. fixtures swine_flu2.json]))
         @curl.expects(:body_str).returns(@swine_flu_json)
@@ -73,9 +73,9 @@ describe Osprey::Search do
       before do
         @curl.expects(:response_code).returns(200)
         @backend = mock('backend')
-        @backend.expects(:get).with('twitter-id-pool').twice.returns([1701715308, 1701714956])
-        @backend.expects(:get).with(@tr.__send__(:url_key)).returns(nil)
-        @backend.expects(:set).twice
+        @backend.expects(:[]).with('twitter-id-pool').twice.returns([1701715308, 1701714956])
+        @backend.expects(:[]).with(@tr.__send__(:url_key)).returns(nil)
+        @backend.expects(:[]=).twice
         @tr.instance_variable_set(:@backend, @backend)
         @swine_flu_json = File.read(File.join(File.dirname(__FILE__), %w[.. fixtures swine_flu1.json]))
         @curl.expects(:body_str).returns(@swine_flu_json)
