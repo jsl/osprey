@@ -62,9 +62,8 @@ with options pointing to the backend:
   o = Osprey::Search.new('Swine Flu', { :backend => { :moneta_klass => 'Moneta::Memcache', :server => 'localhost:1978' } })
 
 When you fetch the results, important information about the last tweets received are stored in an efficient structure using the
-backend.
-  results = o.fetch
-
+backend.  In the case above, storage will be in Tokyo Tyrant running on the local machine.
+  
 == Tweet id pool configuration
 
 Osprey saves ids of previously fetched tweets in the pool so that it can differentiate between new tweets and previously seen tweets, even
