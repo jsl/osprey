@@ -1,5 +1,3 @@
-require 'md5'
-
 module Osprey
   
   # Primary interface to the Osprey Twitter search library.
@@ -46,6 +44,7 @@ module Osprey
       @backend = initialize_backend(@options[:backend][:moneta_klass], @options[:backend].except(:moneta_klass))
     end
     
+    # Returns a Osprey::ResultSet object containing Osprey::Tweet objects for the tweets found for query.
     def fetch
       p_results = previous_results
       
@@ -145,7 +144,9 @@ module Osprey
       ['term', term_hash].join('-')
     end
 
-    # Returns the Twitter search URL for @term
+    # Returns the Twitter search URL for @term.  Merges the last response ID into the query string
+    # if we have previous results for this query.  This eliminates most duplication from previous 
+    # results and decreases transfer size.
     def url(previous_response)
       url = "http://search.twitter.com/search.json?rpp=#{@options[:rpp]}&q=#{CGI.escape(@term)}"
 
