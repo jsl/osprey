@@ -16,7 +16,7 @@ by storing the ids of previous tweets in a global pool which can easily be share
 Basic usage of Osprey is simple, and more advanced usage is easily accomodated by the accepted options and the
 ability to write custom backend modules.
  
-In more basic cases, you can use Osprey as follows:
+In more basic cases, you can use Osprey::Search (the main interface to Osprey) as follows:
  
   require 'osprey'
   
@@ -34,6 +34,8 @@ between client and server.
 Note that because this is done, in most cases "results" will be the same as "new_results".  Since Twitter doesn't 
 guarantee that results arrive in order, however, Osprey does checking to make sure that new_results really aren't 
 ones that we've seen before.
+
+See the documentation for Osprey::Search for more information on providing options for the backend configuration of Osprey.
 
 = Processing Details
 
