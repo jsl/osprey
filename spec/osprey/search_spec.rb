@@ -89,6 +89,14 @@ describe Osprey::Search do
     end
   end
   
+  describe "#url_key" do
+    it "should create a key with the MD5 hexdigest of the term" do
+      term = 'swine flu'
+      @tr = Osprey::Search.new(term)
+      @tr.__send__(:url_key).should == "term-#{MD5.hexdigest(term)}"
+    end
+  end
+  
   describe "#url" do
     before do
       @tr = Osprey::Search.new('swine flu')

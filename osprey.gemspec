@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{osprey}
-  s.version = "0.0.6"
+  s.version = "0.0.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Leitgeb"]
@@ -23,7 +23,16 @@ Gem::Specification.new do |s|
   s.summary = %q{A Twitter API that keeps track of tweets you've seen}
   s.test_files = Dir['spec/**/*']
 
-  %w[ curb wycats-moneta hashback json memcache ].each do |dep|
+  s.extra_rdoc_files = [ "README.rdoc" ]
+  
+  s.rdoc_options += [
+    '--title', 'Osprey',
+    '--main', 'README.rdoc',
+    '--line-numbers',
+    '--inline-source'
+   ]
+
+  %w[ curb wycats-moneta hashback json memcache-client ].each do |dep|
     s.add_dependency(dep)
   end
 

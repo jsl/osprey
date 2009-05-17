@@ -1,3 +1,5 @@
+require 'md5'
+
 module Osprey
   
   # Primary interface to the Osprey Twitter search library.
@@ -139,7 +141,8 @@ module Osprey
     # Effectively namespaces the urls so that we can use the backend modules for 
     # storage of other things like a pool of recently-read twitter ids.
     def url_key
-      ['search', 'term', @term].join('-')
+      term_hash = MD5.hexdigest(@term)
+      ['term', term_hash].join('-')
     end
 
     # Returns the Twitter search URL for @term
