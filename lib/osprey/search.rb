@@ -24,16 +24,24 @@ module Osprey
     #   o = Osprey::Search.new('Swine Flu', { :backend => { :moneta_klass => 'Moneta::Memcache', :server => 'localhost:1978' } })
     #   results = o.fetch
     # 
-    # Options
+    # Options:
+    #
+    # The Osprey::Search library supports options for customizing the parameters that will be passed to Twitter as well
+    # as to the local backend for keeping track of state.
     # 
     # - _backend_ - A hash of options which are passed directly to the Moneta class used as key-value store.  The 
-    #   value for this option should be another Hash containing configuration options for the backend.
+    #   value for this option should be another Hash containing configuration options for the backend.  Keys supported
+    #   by the backend hash:
     # 
     #   - _moneta_backend_ - The backend used for storing the serialized representation of the last fetch of
-    #     this query.  Uses Moneta, a unified interface to key-value storage systems.
+    #     this query.  Uses Moneta, a unified interface to key-value storage systems.  This value may be a String, 
+    #     in which case the appropriate Moneta library will be automatically required, or a class constant.  If a 
+    #     class constant is given, it is up to the calling user to require the appropriate Moneta library before referring
+    #     to the constant in the initialization of Osprey::Search.
     #
     #   - _other_options_  - Any other options given to the backend hash will be passed directly to the Moneta class 
-    #     used as key-value store for configuration.
+    #     used as key-value store for configuration.  Please see the documentation for the appropriate Moneta class for
+    #     options supported.
     # 
     # - _preserved_tweet_ids_ - The number of Tweet ids that will be preserved.  This ensures that we're able to detect if
     #   running different queries returns the same tweet in order to not mark that tweet as a new
