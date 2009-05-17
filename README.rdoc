@@ -27,7 +27,13 @@ In more basic cases, you can use Osprey as follows:
 
 Osprey starts to work its magic when you call fetch more than once, either in the current session or after re-
 instantiating the program.  Osprey will remember the tweets that it last retrieved and show you a list of new_feeds
-in the response object.
+in the response object.  In order to be efficient with network traffic and to reduce client logic, it automatically 
+populates the last seen tweet id in the query string to the API, resulting in fewer records needing to be transeferred
+between client and server.
+
+Note that because this is done, in most cases "results" will be the same as "new_results".  Since Twitter doesn't 
+guarantee that results arrive in order, however, Osprey does checking to make sure that new_results really aren't 
+ones that we've seen before.
 
 = Processing Details
 
