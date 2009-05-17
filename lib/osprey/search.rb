@@ -14,29 +14,36 @@ module Osprey
 
     # Initializes the Osprey::Search client.
     #
-    # Usage:
+    # Usage (Basic):
     # 
     #   search = Osprey::Search.new(term, options)
     #   results = search.fetch
     #
+    # Usage (Custom Backend):
+    #
+    #   o = Osprey::Search.new('Swine Flu', { :backend => { :moneta_klass => 'Moneta::Memcache', :server => 'localhost:1978' } })
+    #   results = o.fetch
+    # 
     # Options
     # 
-    # :moneta_backend -  
-    #   The backend used for storing the serialized representation of the last fetch of
-    #   this query.  Uses Moneta, a unified interface to key-value storage systems.
+    # - _backend_ - A hash of options which are passed directly to the Moneta class used as key-value store.  The 
+    #   value for this option should be another Hash containing configuration options for the backend.
     # 
-    # :preserved_tweet_ids - 
-    #   The number of Tweet ids that will be preserved.  This ensures that we're able to detect if
+    #   - _moneta_backend_ - The backend used for storing the serialized representation of the last fetch of
+    #     this query.  Uses Moneta, a unified interface to key-value storage systems.
+    #
+    #   - _other_options_  - Any other options given to the backend hash will be passed directly to the Moneta class 
+    #     used as key-value store for configuration.
+    # 
+    # - _preserved_tweet_ids_ - The number of Tweet ids that will be preserved.  This ensures that we're able to detect if
     #   running different queries returns the same tweet in order to not mark that tweet as a new
     #   record.  Choosing a higher number here will mean some additional processing time for each
     #   new tweet, and a small amount of increased storage.  The default should be a decent compromise
     #   between performance needs while still not seeing duplicate tweets show up as new records.
     #
-    # :rpp - 
-    #   Requests per page. Determines the results to fetch from Twitter.  Defaults to 50.
+    # - _rpp_ - Requests per page. Determines the results to fetch from Twitter.  Defaults to 50.
     #
-    # :since_id -
-    #   Tells twitter to only give us results with an ID greater than the given ID.  Supplied by
+    # - _since_id_ - Tells twitter to only give us results with an ID greater than the given ID.  Supplied by
     #   default in URL string if previous results were found.    
     def initialize(term, options = { })
       @term    = term
