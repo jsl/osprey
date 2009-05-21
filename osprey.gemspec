@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{osprey}
-  s.version = "0.0.8"
+  s.version = "0.0.8.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Leitgeb"]
@@ -13,7 +13,12 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   
-  s.files = Dir['lib/**/*.rb'] + Dir['[A-Z]*'] + Dir['spec/**/*']
+  s.files = ["lib/core_ext/array.rb", "lib/core_ext/hash.rb", "lib/osprey/result_set.rb", 
+    "lib/osprey/search.rb", "lib/osprey/tweet.rb", "lib/osprey.rb", "LICENSE", "osprey-0.0.7.gem", 
+    "osprey.gemspec", "Rakefile", "README.rdoc", "spec/fixtures/swine_flu1.json", "spec/fixtures/swine_flu2.json", 
+    "spec/fixtures/swine_flu_result_set1.yml", "spec/fixtures/swine_flu_result_set2.yml", 
+    "spec/osprey/result_set_spec.rb", "spec/osprey/search_spec.rb", "spec/osprey_spec.rb", 
+    "spec/spec_helper.rb", "VERSION.yml"]
   
   s.has_rdoc = true
   s.homepage = %q{http://github.com/jsl/osprey}
@@ -21,7 +26,9 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.1}
   s.summary = %q{A Twitter API that keeps track of tweets you've seen}
-  s.test_files = Dir['spec/**/*']
+  s.test_files = ["spec/fixtures", "spec/fixtures/swine_flu1.json", "spec/fixtures/swine_flu2.json", 
+    "spec/fixtures/swine_flu_result_set1.yml", "spec/fixtures/swine_flu_result_set2.yml", "spec/osprey", 
+    "spec/osprey/result_set_spec.rb", "spec/osprey/search_spec.rb", "spec/osprey_spec.rb", "spec/spec_helper.rb"]
 
   s.extra_rdoc_files = [ "README.rdoc" ]
   
