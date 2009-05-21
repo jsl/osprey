@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   ]
   
   s.files = ["lib/core_ext/array.rb", "lib/core_ext/hash.rb", "lib/osprey/result_set.rb", 
-    "lib/osprey/search.rb", "lib/osprey/tweet.rb", "lib/osprey.rb", "LICENSE", "osprey-0.0.7.gem", 
+    "lib/osprey/search.rb", "lib/osprey/tweet.rb", "lib/osprey.rb", "LICENSE", 
     "osprey.gemspec", "Rakefile", "README.rdoc", "spec/fixtures/swine_flu1.json", "spec/fixtures/swine_flu2.json", 
     "spec/fixtures/swine_flu_result_set1.yml", "spec/fixtures/swine_flu_result_set2.yml", 
     "spec/osprey/result_set_spec.rb", "spec/osprey/search_spec.rb", "spec/osprey_spec.rb", 
