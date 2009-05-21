@@ -9,7 +9,7 @@ by storing the ids of previous tweets in a global pool which can easily be share
   
 = Installation
 
-  sudo gem install osprey
+  sudo gem install jsl-osprey
 
 = Usage
 
