@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{osprey}
-  s.version = "0.0.8.1"
+  s.version = "0.0.8.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Leitgeb"]
@@ -26,8 +26,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.1}
   s.summary = %q{A Twitter API that keeps track of tweets you've seen}
-  s.test_files = ["spec/fixtures", "spec/fixtures/swine_flu1.json", "spec/fixtures/swine_flu2.json", 
-    "spec/fixtures/swine_flu_result_set1.yml", "spec/fixtures/swine_flu_result_set2.yml", "spec/osprey", 
+  s.test_files = ["spec/fixtures/swine_flu1.json", "spec/fixtures/swine_flu2.json", 
+    "spec/fixtures/swine_flu_result_set1.yml", "spec/fixtures/swine_flu_result_set2.yml", 
     "spec/osprey/result_set_spec.rb", "spec/osprey/search_spec.rb", "spec/osprey_spec.rb", "spec/spec_helper.rb"]
 
   s.extra_rdoc_files = [ "README.rdoc" ]
